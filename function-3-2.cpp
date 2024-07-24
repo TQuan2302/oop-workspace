@@ -20,7 +20,7 @@ int median_array(int array[], int n){
             }
         }
     }
-
-   median = floor(array[n/2]); 
+    int middle = floor(n/2); 
+    median = array[middle]; 
    return median; 
 }
