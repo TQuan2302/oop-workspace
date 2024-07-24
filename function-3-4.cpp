@@ -5,9 +5,9 @@ void print_pass_fail(char grade){
         case 'A':
         case 'B':
         case 'C':
-        case 'D':
             std:: cout << "Pass" << std::endl; 
             break; 
+        case 'D':
         case 'E': 
             std:: cout << "Fail" << std::endl; 
             break;
