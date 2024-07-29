@@ -7,7 +7,6 @@ using namespace std;
 
 string convert_to_binary(int number){
     string s = ""; 
-    int counter = 0; 
     int remainder = 0; 
 
     while(number!=0){
@@ -20,4 +19,8 @@ string convert_to_binary(int number){
 
 
     return s; 
+}
+
+int main(){
+    cout << convert_to_binary(300); 
 }
