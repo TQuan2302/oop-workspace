@@ -2,3 +2,4 @@
 double arrayMax(double* array, int n); 
 double* dynamicArray(int n, double M);
 void printArray(double* array, int n);
+void changeValue(double *number); 
