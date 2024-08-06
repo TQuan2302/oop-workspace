@@ -35,8 +35,11 @@ void printArray(double* array, int n){
 
 
 int main(){
+    double numberToTestChangeValue = 10; 
     double* number = dynamicArray(10, 12.3); 
     double max = arrayMax(number,10); 
+    changeValue(&numberToTestChangeValue); 
+
     printArray(number, 10);
     cout << max << endl; 
 
