@@ -1,6 +1,12 @@
 #include<iostream>
 using namespace std; 
 
+void changeValue(double *number){
+    *number = 42; 
+}
+
+
+
 double arrayMax(double* array, int n){
     double max = array[0]; 
 
