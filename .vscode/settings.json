@@ -4,6 +4,9 @@
         "string_view": "cpp",
         "initializer_list": "cpp",
         "utility": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "new": "cpp"
     }
 }
