@@ -19,7 +19,7 @@ int Orchestra :: get_current_number_of_members(){
 
 bool Orchestra :: has_instrument(std::string instrument){
     for(int i = 0; i< current_size; i++){
-        if(instrument.compare(list[i].get_instrument()) == 0){
+        if(!instrument.compare(list[i].get_instrument())){
             return true; 
         }   
     }
@@ -32,7 +32,8 @@ Musician* Orchestra :: get_members(){
 
 bool Orchestra :: add_musician(Musician new_musician){
     if(current_size <  max_size){
-        list[current_size] = Musician();
+        list[current_size] = new_musician;
+        current_size++; 
         return true; 
     }
     return false;
