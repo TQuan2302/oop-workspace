@@ -12,7 +12,7 @@ Truck_yard :: Truck_yard(){
 Truck_yard:: Truck_yard(int capacity){
     int max_capacity = capacity; 
     int curr_capacity = 0; 
-    Truck* stock = new Truck[max_capacity]; 
+    Truck* stock = new Truck[capacity]; 
 } // constructor for yard that can hold "capacity" trucks
 
 int Truck_yard:: get_total_stock_count(){
