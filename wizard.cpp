@@ -12,3 +12,7 @@ void Wizard :: castSpell(Player* opponent){
     Player:: attack(opponent, mana);
     cout << name << " casts a spell on " << opponent->getName() << " for " << damage << " damage.\n";
 }
+
+string Wizard :: getName(){
+    return name; 
+}

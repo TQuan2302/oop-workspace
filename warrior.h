@@ -14,6 +14,7 @@ class Warrior : public Player{
         Warrior(string name, int health, int damage, string weapon); 
         Warrior();
         void swingWeapon(Player* opponent); 
+        string getName(); 
 }; 
 
 #endif

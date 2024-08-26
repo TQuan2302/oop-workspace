@@ -4,7 +4,7 @@ using namespace std;
 #include "player.h"
 
 Player:: Player(string name, int health, int damage){
-    this -> name == name;
+    this -> name = name;
     this -> health = health;  
     this -> damage = damage; 
 }

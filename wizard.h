@@ -12,6 +12,7 @@ class Wizard : public Player{
         Wizard(string name, int health, int damage, int mana); 
         Wizard(); 
         void castSpell(Player* opponent); 
+        string getName(); 
         
 }; 
 

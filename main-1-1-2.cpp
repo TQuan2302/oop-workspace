@@ -6,11 +6,11 @@
 using namespace std;
 
 int main() {
-    //Wizard(name, health, damage, mana)
+    // Wizard(name, health, damage, mana)
     Wizard wizard("Gandalf", 100, 20, 50);
-    //Warrior(name, health, damage, weapon)
+    // Warrior(name, health, damage, weapon)
     Warrior warrior("Aragorn", 120, 25, "Sword");
-    
+    cout << "The name is: " << warrior.getName() << endl;
     cout << "Let the battle begin!" << endl;
 
     while (wizard.getHealth() > 0 && warrior.getHealth() > 0) {
