@@ -42,5 +42,8 @@ int main(){
     int ID = 0; 
     cin >> ID;  
     p1.unparkVehicle(ID);
+    cout << "please enter the ID of the vehicle you want to unpark: ";
+    cin >> ID;  
+    p1.unparkVehicle(ID);
 
 }
