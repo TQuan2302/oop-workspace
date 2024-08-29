@@ -35,6 +35,6 @@ int main(){
         }
 
     }
-    cout << p1.countOverStayingVehicles(15) << endl; 
+    cout << p1.countOverstayingVehicles(15) << endl; 
 
 }
