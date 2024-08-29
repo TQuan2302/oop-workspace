@@ -16,7 +16,6 @@ void ParkingLot:: parkVehicle(Vehicle* object){
     if(curr_capacity < max_capacity){
         vehicles[curr_capacity] = object; 
         curr_capacity++; 
-        cout << "Add successfully" << endl ;
     }
     else{
         cout << "The lot is full" << endl ; 
@@ -31,7 +30,6 @@ void ParkingLot:: unparkVehicle(int ID){
             deleted_pos_array[deleted_array_index] = vehicles[i]->getID(); 
             deleted_array_index++; 
             curr_capacity--; 
-            cout << "Vehicle is unparked" << endl; 
             return; 
         }
     }
