@@ -20,18 +20,18 @@ int main(){
         if(type.compare("bus")){
             Bus b(i);
             list[i] = b; 
-            cout << list[i].getParkingDuration() << endl;
+            cout << list[i].get_time_of_entry() << endl;
         }
         else if(type.compare("motorbike")){
             Motorbike m(i); 
             list[i] = m; 
-            cout << list[i].getParkingDuration() << endl;
+            cout << list[i].get_time_of_entry() << endl;
         }
 
         else if(type.compare("car")){
             Car c(i); 
             list[i] = c; 
-            cout << list[i].getParkingDuration() << endl;
+            cout << list[i].get_time_of_entry() << endl;
         }
 
     }

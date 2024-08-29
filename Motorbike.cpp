@@ -10,7 +10,7 @@ Motorbike:: Motorbike(int ID){
 }
 
 int Motorbike::   getParkingDuration(){
-    time_t now = time(NULL); 
+    time_t now = time(0); 
     int result = (now - this->getTimeOfEntry())*(1-0.15);
     return result; 
 }
