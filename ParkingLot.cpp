@@ -64,6 +64,16 @@ bool ParkingLot:: checkID(int ID){
     return is_in; 
 } //If ID is in the deleted list then ignore in unparkVehicle. 
 
+int ParkingLot::  countOverStayingVehicles(int maxParkingDuration){
+    int result = 0; 
+    for(int i = 0; i<curr_capacity; i++){
+        if(vehicles[i]->getParkingDuration() - maxParkingDuration < 0 ){
+            result++; 
+        }
+    }
+    return result; 
+}
+
 
 
 

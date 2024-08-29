@@ -23,6 +23,7 @@ class ParkingLot{
         ~ParkingLot(); //The dafault destructor
         Vehicle* getVehicle(int ID);
         bool checkID(int ID); //If ID is in the deleted list then ignore in unparkVehicle. 
+        int countOverStayingVehicles(int maxParkingDuration); // Return the number of vehicle stayed in the parking lot for more than the maxParkingDuration 
 
 };
 
