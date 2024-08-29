@@ -9,7 +9,7 @@ Bus:: Bus(int ID){
     timeOfEntry = time(0); 
 }
 
-int Bus::   getParkingDuration(){
+int Bus:: getParkingDuration(){
     time_t now = time(0); 
     int result = (now - this->getTimeOfEntry())*(1-0.25);
     return result; 
