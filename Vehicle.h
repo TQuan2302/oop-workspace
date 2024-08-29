@@ -16,7 +16,7 @@ class Vehicle{
 
         char*  get_time_of_entry();
 
-        int getParkingDuration();
+        virtual int getParkingDuration();
 
         time_t  getTimeOfEntry();
 };

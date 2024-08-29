@@ -67,7 +67,7 @@ bool ParkingLot:: checkID(int ID){
 int ParkingLot::  countOverstayingVehicles(int maxParkingDuration){
     int result = 0; 
     for(int i = 0; i<curr_capacity; i++){
-        if((vehicles[i]->getParkingDuration() - maxParkingDuration < 0) && !checkID(vehicles[i]->getID()) ){
+        if((maxParkingDuration - vehicles[i]->getParkingDuration() < 0) && !checkID(vehicles[i]->getID()) ){
             result++; 
         }
     }
