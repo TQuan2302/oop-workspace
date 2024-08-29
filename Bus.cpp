@@ -11,6 +11,6 @@ Bus:: Bus(int ID){
 
 int Bus::   getParkingDuration(){
     time_t now = time(0); 
-    int result = (this->getTimeOfEntry() - now)*(1-0.25);
+    int result = (now - this->getTimeOfEntry())*(1-0.25);
     return result; 
 }
