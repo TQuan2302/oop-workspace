@@ -25,7 +25,7 @@ void ParkingLot:: parkVehicle(Vehicle* object){
 
 void ParkingLot:: unparkVehicle(int ID){
     for(int i = 0; i<curr_capacity; i++){
-        if(vehicles[i]->getID() == ID ){
+        if(vehicles[i]->getID() == ID && !checkID(vehicles[i]->getID())){
             deleted_pos_array[deleted_array_index] = vehicles[i]->getID(); 
             delete vehicles[i]; 
             deleted_array_index++; 
