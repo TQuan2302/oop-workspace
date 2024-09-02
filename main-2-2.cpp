@@ -9,7 +9,7 @@ int main(){
     cout << f1.getVolume() << endl;
     f1.setVolume(13.3); 
     cout << f1.getVolume() << endl;
-    cout << f1.get_PowerRating() << endl;
+    cout << f1.get_powerRating() << endl;
 
     cout << f1.getPowerConsumption() << endl; 
     return 0; 
