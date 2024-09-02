@@ -10,8 +10,8 @@ class Appliance{
         void turnOn(); 
         void turnOff(); 
         virtual double getPowerConsumption(); 
-        int get_PowerRating(); 
-        bool get_IsOn(); 
+        int get_powerRating(); 
+        bool get_isOn(); 
 
     protected:
         int powerRating; 

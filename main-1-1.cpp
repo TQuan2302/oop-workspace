@@ -6,9 +6,9 @@ using namespace std;
 int main(){
     Appliance a1(120); 
 
-    cout << a1.getIsOn() << endl; 
+    cout << a1.get_IsOn() << endl; 
     cout << a1.getPowerConsumption() << endl; 
-    cout << a1.getPowerRating() << endl; 
+    cout << a1.get_PowerRating() << endl; 
 
     return 0; 
 }

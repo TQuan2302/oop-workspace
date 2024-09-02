@@ -24,10 +24,10 @@ double Appliance:: getPowerConsumption(){
     return 0; 
 }
 
-int Appliance :: get_PowerRating(){
+int Appliance :: get_powerRating(){
     return powerRating;
 }
 
-bool Appliance ::  get_IsOn(){
+bool Appliance ::  get_isOn(){
     return isOn; 
 }
