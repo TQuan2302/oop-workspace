@@ -11,7 +11,7 @@ class House{
         House(int numAppliances); 
         bool addAppliance(Appliance* appliance);//return true if there is space, otherwise return false
         double getTotalPowerConsumption(); 
-        ~House(); 
+        virtual ~House(); 
     private:
         int curr_index; 
         Appliance** appliances; 
