@@ -11,8 +11,8 @@ class AirVehicle{
         float get_fuel(); 
         int get_numberOfFlights(); 
         void set_weight(); 
-        void set_fuel(); 
-        void set_numberOfFlights(); 
+        void set_fuel(float fuel); 
+        void set_numberOfFlights(float numFlight); 
 
     protected:
         int weight;        // the weight of AirVehicle 
