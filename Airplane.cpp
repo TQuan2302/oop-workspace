@@ -16,25 +16,22 @@ void Airplane:: reducePassengers(int x){
 }
 
 void Airplane:: fly(int headwind, int minutes){
-    float  consumption = 0; 
-    if(headwind >= 60){
-        consumption = minutes*(0.5);
-    }
-    else{
-        consumption = minutes*(0.25); 
+    float consumption = 0.001 * numPassengers * minutes;
+
+    if (headwind < 60) {
+        consumption += 0.3 * minutes;
     }
 
-    
-    consumption = consumption + numPassengers*(((0.001)*fuel)*minutes); 
-    
+    else {
+        consumption += 0.5 * minutes;
+    }
 
-    if(fuel - consumption < 20){//Less than 20% then do not fly
-        return; 
+    if (fuel - consumption < 20) {
+        return;
     }
-    else{
-        fuel = fuel - consumption; 
-        numberOfFlights++; 
-    }
+
+    fuel = fuel - consumption;
+    numberOfFlights++;
 }
 
 int Airplane:: get_numPassengers(){
