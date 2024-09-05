@@ -12,7 +12,7 @@ AirVehicle:: AirVehicle(int w){
 }  // creates an AirVehicle with weight w
 
 void AirVehicle:: refuel(){
-    this->numberOfFlights = 0; 
+    this->numberOfFlights = 100; 
 }      // Resets fuel back to 100%
 
 void AirVehicle:: fly(int headwind, int minutes){
