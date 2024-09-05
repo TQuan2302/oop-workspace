@@ -14,8 +14,8 @@ void Helicopter:: fly(int headwind, int minutes){
     else{
         consumption = minutes*(0.18); 
     }
-    int extra_weight = 5670 - weight; 
-    if(extra_weight>0){
+    int extra_weight = weight - 5670; 
+    if(extra_weight > 0){
         consumption = consumption + extra_weight*((0.01)*fuel); 
     }
 
