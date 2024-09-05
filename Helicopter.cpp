@@ -7,24 +7,27 @@ Helicopter:: Helicopter(int w, string n): AirVehicle(w), name(n){
 
                     // name of the Helicopter
 void Helicopter:: fly(int headwind, int minutes){
-    float  consumption = 0; 
-    if(headwind >= 40){
-        consumption = minutes*(0.4);
-    }
-    else{
-        consumption = minutes*(0.18); 
-    }
-    int extra_weight = weight - 5670; 
-    if(extra_weight > 0){
-        consumption = consumption + extra_weight*((0.01)*fuel); 
+    float fuelNeeded = 0;
+    int extraWeight = weight - 5670;
+
+    if (headwind < 40) {
+        fuelNeeded += 0.2 * minutes;
     }
 
-    if(fuel - consumption < 20){//Less than 20% then do not fly
-        return; 
+    else {
+        fuelNeeded += 0.4 * minutes;
     }
 
-    fuel = fuel - consumption; 
-    numberOfFlights++; 
+    if (extraWeight > 0) {
+        fuelNeeded += 0.01 * extraWeight * minutes;
+    }
+
+    if (fuel - fuelNeeded < 20) {
+        return;
+    }
+
+    fuel -= fuelNeeded;
+    numberOfFlights++;  
 }
 
 string Helicopter:: get_name(){
