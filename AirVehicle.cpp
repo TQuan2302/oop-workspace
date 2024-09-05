@@ -38,5 +38,5 @@ void AirVehicle:: set_fuel(float fuel){
     this->fuel = fuel; 
 }
 void AirVehicle:: set_numberOfFlights(int numFlight){
-    this->numberOfFlights = numFlight; 
+    numberOfFlights = numFlight; 
 }
