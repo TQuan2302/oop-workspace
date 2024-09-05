@@ -22,10 +22,9 @@ void Helicopter:: fly(int headwind, int minutes){
     if(fuel - consumption < (20)*fuel){//Less than 20% then do not fly
         return; 
     }
-    else{
-        fuel = fuel - consumption; 
-        numberOfFlights++; 
-    }
+
+    fuel = fuel - consumption; 
+    numberOfFlights++; 
 }
 
 string Helicopter:: get_name(){
