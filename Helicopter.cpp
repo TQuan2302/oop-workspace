@@ -19,7 +19,7 @@ void Helicopter:: fly(int headwind, int minutes){
         consumption = consumption + extra_weight*((0.01)*fuel); 
     }
 
-    if(fuel - consumption < (20)*fuel){//Less than 20% then do not fly
+    if(fuel - consumption < 20){//Less than 20% then do not fly
         return; 
     }
 
