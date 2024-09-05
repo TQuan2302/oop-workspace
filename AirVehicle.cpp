@@ -31,8 +31,8 @@ int AirVehicle:: get_numberOfFlights(){
     return numberOfFlights;
 }
 
-void AirVehicle:: set_weight(){
-
+void AirVehicle:: set_weight(int weight){
+    this->weight = weight; 
 }
 void AirVehicle:: set_fuel(float fuel){
     this->fuel = fuel; 

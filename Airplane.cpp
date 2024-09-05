@@ -24,6 +24,7 @@ void Airplane:: fly(int headwind, int minutes){
         consumption = minutes*(0.25/100); 
     }
     
+    
     consumption = consumption + numPassengers*(((0.001/100)*fuel)*minutes); 
     
 

@@ -10,7 +10,7 @@ class AirVehicle{
         int get_weight(); 
         float get_fuel(); 
         int get_numberOfFlights(); 
-        void set_weight(); 
+        void set_weight(int weight); 
         void set_fuel(float fuel); 
         void set_numberOfFlights(int numFlight); 
 
