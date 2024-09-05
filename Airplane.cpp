@@ -19,7 +19,7 @@ void Airplane:: fly(int headwind, int minutes){
     float consumption = 0.001 * numPassengers * minutes;
 
     if (headwind < 60){
-        consumption += 0.3 * minutes;
+        consumption += 0.25* minutes;
     }
 
     else {
