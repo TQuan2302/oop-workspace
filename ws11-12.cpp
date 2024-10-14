@@ -21,8 +21,18 @@ public:
         _file.open(_filename, ios::in);
         if (_file.is_open()) {
             string line;
-            while (std::getline(_file, line)) {
-                records.push_back(stoi(line));
+            //Check if the line contain only number: No need these line
+            // for(int i = 0; i<line.length(); i++){
+            //     // if(!isdigit(line[i])){
+            //     //     _file.close(); 
+            //     //     throw std:: invalid_argument(""); 
+            //     // }
+            // }
+            while (std::getline(_file, line)) {//An invalid_argument exeption is thrown here if there is one 
+                // if(stoi(line) > pow(2,32)-1){
+                //     throw std:: out_of_range(""); 
+                // }
+                records.push_back(stoi(line)); //An out_of_range exeption is thrown here if there is one
             }
             _file.close();
         }
@@ -32,8 +42,8 @@ public:
 int main() {
         try{
             // RecordsManager receordM("test_clean.txt");
-            // RecordsManager receordM("test_corrupt1.txt");
-            RecordsManager receordM("test_corrupt2.txt");
+            RecordsManager receordM("test_corrupt1.txt");
+            // RecordsManager receordM("test_corrupt2.txt");
             Records myRecords;
 
             // reads records
