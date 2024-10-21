@@ -11,7 +11,8 @@ int main(){
     Mine mine(13,14); 
     Explosion explosion(12,13); 
     ship.move(13,14); 
-    mine.explode(); 
-    explosion.apply(ship); 
+    // mine.explode(); 
+    // explosion.apply(ship);
+    cout << get<0>(ship.getPos()) <<  ", " << get<1>(ship.getPos())  << endl; 
     return 0; 
 }

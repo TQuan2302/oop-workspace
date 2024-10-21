@@ -9,7 +9,6 @@ class Ship: public GameEntity{
             position = make_tuple(dx, dy); 
         }
         Ship(int x, int y): GameEntity(x,y,'n'){
-            position = make_tuple(x,y); 
             type = ShipType; 
         }
 };

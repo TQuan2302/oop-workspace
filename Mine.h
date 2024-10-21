@@ -8,7 +8,8 @@ class Mine: public GameEntity{
     public: 
         Explosion explode(){
             type = NoneType;
-            Explosion exObject(0,0);  
+            tuple<int, int> pos =  this->getPos(); 
+            Explosion exObject(get<0>(pos), get<1>(pos));  
             return exObject; 
         }
         Mine(int x, int y): GameEntity(x,y,'n'){
