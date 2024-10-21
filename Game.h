@@ -45,8 +45,8 @@ class Game{
         }
         void gameLoop(int maxIterations, double mineDistanceThreshold){
             entities = initGame(5,5,20,20); 
-            for(int i = 0; i<entities.size() && i <= maxIterations; i++){
-                // cout << entities.at(i)->getType() << endl; 
+            int iterationCount = 0; 
+            for(int i = 0; i<entities.size(); i++){
                 if(entities.at(i)->getType() == GameEntityType::ShipType){
                     entities.at(i)->move(1,0); //Move the ship
                     for(int j = 0; j<entities.size(); j++){
@@ -57,14 +57,22 @@ class Game{
                                 Ship* tempShip  = dynamic_cast<Ship*>(entities.at(i));
 
                                 explosion.apply(*entities.at(i)); 
+                                cout << entities.at(i)->getType() << endl;
                                 countShip--; 
+                                if(countShip == 0){
+                                    return; 
+                                }
                             }
-                            if(countShip == 0){
-                                return; 
-                            }
+                            
+                        }
+                        iterationCount++; 
+                        if(iterationCount>maxIterations){
+                            return; 
                         }
                     }
+
                 }
+                
             }
         }
 
