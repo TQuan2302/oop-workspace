@@ -34,6 +34,23 @@ class GameEntity{
         virtual void move(int x, int y){
 
         }
+
+        void setType(int number){
+            if(number > 3){
+                return; 
+            }
+            switch(number){
+                case 0:
+                    type = ExplosionType; 
+                case 1: 
+                    type = MineType; 
+                case 2: 
+                    type = NoneType; 
+                case 3: 
+                    type = ShipType; 
+            }
+
+        }
         // virtual Explosion explode(){
         //     type = NoneType;
         //     Explosion exObject(0,0);  
