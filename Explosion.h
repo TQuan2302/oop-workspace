@@ -7,7 +7,6 @@
 
 class Explosion: public GameEntity, public Effect{
     public:
-        Explosion():Explosion(-3,-3){}
         Explosion(int x, int y): GameEntity(x,y, 'n'){
             this->type = ExplosionType; 
         }

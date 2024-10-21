@@ -1,15 +1,14 @@
 #ifndef GAME_ENTITY_H
 #define GAME_ENTITY_H
 #include<iostream>
-// #include"Explosion.h"
 using namespace std; 
 #include<tuple> 
 
 enum GameEntityType{
-    ExplosionType, 
-    MineType, 
-    NoneType,
-    ShipType
+    ExplosionType = 0, 
+    MineType = 1, 
+    NoneType = 2,
+    ShipType = 3
 };
 
 class GameEntity{
@@ -44,17 +43,13 @@ class GameEntity{
                     type = ExplosionType; 
                 case 1: 
                     type = MineType; 
-                case 2: 
+                case 2:  
                     type = NoneType; 
                 case 3: 
                     type = ShipType; 
             }
 
         }
-        // virtual Explosion explode(){
-        //     type = NoneType;
-        //     Explosion exObject(0,0);  
-        //     return exObject; 
-        // }
+
 };
 #endif
