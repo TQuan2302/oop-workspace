@@ -49,12 +49,12 @@ class Game{
                 // cout << entities.at(i)->getType() << endl; 
                 if(entities.at(i)->getType() == GameEntityType::ShipType){
                     entities.at(i)->move(1,0); //Move the ship
-
                     for(int j = 0; j<entities.size(); j++){
-                        if(entities.at(i)->getType() == GameEntityType::MineType){
+                        if(entities.at(j)->getType() == GameEntityType::MineType){
                             if(Utils::calculateDistance(entities.at(i)->getPos(), entities.at(j)->getPos()) <= mineDistanceThreshold){
                                 Mine* temp  = dynamic_cast<Mine*>(entities.at(j));
                                 temp->explode();  
+                                cout << entities.at(i)->getType() << endl;
                                 countShip--; 
                             }
                             if(countShip == 0){
