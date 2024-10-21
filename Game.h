@@ -53,8 +53,10 @@ class Game{
                         if(entities.at(j)->getType() == GameEntityType::MineType){
                             if(Utils::calculateDistance(entities.at(i)->getPos(), entities.at(j)->getPos()) <= mineDistanceThreshold){
                                 Mine* temp  = dynamic_cast<Mine*>(entities.at(j));
-                                temp->explode();  
-                                cout << entities.at(i)->getType() << endl;
+                                Explosion explosion = temp->explode();  
+                                Ship* tempShip  = dynamic_cast<Ship*>(entities.at(i));
+
+                                explosion.apply(*entities.at(i)); 
                                 countShip--; 
                             }
                             if(countShip == 0){
