@@ -35,9 +35,9 @@ class GameEntity{
         }
 
         void setType(int number){
-            // if(number > 3){
-            //     return; 
-            // }
+            if(number > 3){
+                return; 
+            }
             switch(number){
                 case 0:
                     type = ExplosionType; 

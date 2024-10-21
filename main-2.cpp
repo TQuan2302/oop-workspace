@@ -16,7 +16,8 @@ int main(){
 
     explosion.apply(ship); 
     // cout << mine.getType() << endl; 
+    
     cout << ship.getType() << endl; 
-    // cout << get<0>(ship.getPos()) <<  ", " << get<1>(ship.getPos())  << endl; 
+    cout << get<0>(ship.getPos()) <<  ", " << get<1>(ship.getPos())  << endl; 
     return 0; 
 }
