@@ -35,16 +35,19 @@ class GameEntity{
         }
 
         void setType(int number){
-            if(number > 3){
-                return; 
-            }
+            // if(number > 3){
+            //     return; 
+            // }
             switch(number){
                 case 0:
                     type = ExplosionType; 
+                    break; 
                 case 1: 
                     type = MineType; 
+                    break; 
                 case 2:  
                     type = NoneType; 
+                    break; 
                 case 3: 
                     type = ShipType; 
             }

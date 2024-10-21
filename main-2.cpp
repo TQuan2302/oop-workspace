@@ -9,11 +9,14 @@ using namespace std;
 int main(){
     Ship ship(12,13); 
     Mine mine(13,14); 
-    Explosion explosion(12,13); 
+
     ship.move(13,14); 
-    Explosion e = mine.explode(); 
-    e.apply(ship);
+    
+    Explosion explosion = mine.explode(); 
+
+    explosion.apply(ship); 
+    // cout << mine.getType() << endl; 
     cout << ship.getType() << endl; 
-    cout << get<0>(ship.getPos()) <<  ", " << get<1>(ship.getPos())  << endl; 
+    // cout << get<0>(ship.getPos()) <<  ", " << get<1>(ship.getPos())  << endl; 
     return 0; 
 }
