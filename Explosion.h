@@ -13,7 +13,7 @@ class Explosion: public GameEntity, public Effect{
         }
         void apply(GameEntity& entity){
             entity.setPosition(-1,-1); 
-            entity.setType(3); 
+            entity.setType(2); 
         }
 };
 
