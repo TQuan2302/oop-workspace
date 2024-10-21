@@ -10,7 +10,6 @@ class Mine: public GameEntity{
             type = NoneType;
             tuple<int, int> pos =  this->getPos(); 
             Explosion exObject(get<0>(pos), get<1>(pos));  
-            this->type = NoneType; 
             return exObject; 
         }
         Mine(int x, int y): GameEntity(x,y,'n'){
