@@ -52,7 +52,6 @@ class Game{
             }
 
             for(int i = 0; i<maxIterations; i++){
-                
                 for(GameEntity* ship: entities){
                     if(ship->getType() == ShipType){
                         Ship* castedShip = dynamic_cast<Ship*>(ship); 
@@ -63,6 +62,7 @@ class Game{
                                     Explosion explosion = castedMine->explode();
                                     explosion.apply(*castedShip); 
                                     numShip--; 
+                                    cout << "Ship exploded" << endl; 
                                     break; //Skip this ship
                                 }
                             }
