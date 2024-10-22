@@ -38,11 +38,10 @@ class Game{
                 tuple<int, int> tempPos = Utils:: generateRandomPos(gridWidth,gridHeight);
                 entities.push_back(new Mine(get<0>(tempPos), get<1>(tempPos))); 
             }
-
+            this->entities = entities; 
             return entities; 
         }
         void gameLoop(int maxIterations, double mineDistanceThreshold){
-            entities = initGame(2,5,20,20);
             int numShip = 0;  
             
             //Count the number of ship: 
