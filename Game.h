@@ -55,6 +55,7 @@ class Game{
                 for(GameEntity* ship: entities){
                     if(ship->getType() == ShipType){
                         Ship* castedShip = dynamic_cast<Ship*>(ship); 
+                        castedShip->move(1,0); 
                         for(GameEntity* mine: entities){
                             if(mine->getType() == MineType){
                                 Mine* castedMine = dynamic_cast<Mine*>(mine);
