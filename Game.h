@@ -63,7 +63,6 @@ class Game{
                                     Explosion explosion = castedMine->explode();
                                     explosion.apply(*castedShip); 
                                     numShip--; 
-                                    cout << "Ship has exploded" << endl; 
                                     break; //Skip this ship
                                 }
                             }
