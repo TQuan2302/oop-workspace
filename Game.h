@@ -23,8 +23,6 @@ class Game{
             entities = array; 
         }
 
-
-
         vector<GameEntity*> initGame(int numShips, int numMines, int gridWidth, int gridHeight){
             //Create number of Ship and Mine: 
             //Ship:     
@@ -44,36 +42,36 @@ class Game{
             return entities; 
         }
         void gameLoop(int maxIterations, double mineDistanceThreshold){
-            entities = initGame(5,5,20,20); 
-            int iterationCount = 0; 
-            for(int i = 0; i<entities.size(); i++){
-                if(entities.at(i)->getType() == GameEntityType::ShipType){
-                    entities.at(i)->move(1,0); //Move the ship
+            entities = initGame(5,5,20,20);
+            int numShip = 0;  
+            
+            //Count the number of ship: 
+            for(GameEntity* countShip: entities){
+                if(countShip->getType() == ShipType){
+                    numShip++; 
+                }
+            }
 
-
-                    for(int j = 0; j<entities.size(); j++){
-                        if(entities.at(j)->getType() == GameEntityType::MineType){
-                            if(Utils::calculateDistance(entities.at(i)->getPos(), entities.at(j)->getPos()) <= mineDistanceThreshold){
-                                Mine* temp  = dynamic_cast<Mine*>(entities.at(j));
-                                Explosion explosion = temp->explode();  
-
-                                explosion.apply(*entities.at(i)); 
-                                // cout << entities.at(i)->getType() << endl;
-                                countShip--; 
-                                if(countShip == 0){
-                                    return; 
+            for(int i = 0; i<maxIterations; i++){
+                
+                for(GameEntity* ship: entities){
+                    if(ship->getType() == ShipType){
+                        Ship* castedShip = dynamic_cast<Ship*>(ship); 
+                        for(GameEntity* mine: entities){
+                            if(mine->getType() == MineType){
+                                Mine* castedMine = dynamic_cast<Mine*>(mine);
+                                if(Utils::calculateDistance(castedShip->getPos(), castedMine->getPos()) <= mineDistanceThreshold){
+                                    Explosion explosion = castedMine->explode(); 
+                                    numShip--; 
+                                    cout << "Ship has exploded" << endl; 
+                                    if(numShip == 0){
+                                        return; 
+                                    }
                                 }
                             }
-                            
-                        }
-                        iterationCount++; 
-                        if(iterationCount>maxIterations){
-                            return; 
                         }
                     }
-
                 }
-                
             }
         }
 

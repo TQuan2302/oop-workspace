@@ -4,6 +4,6 @@ using namespace std;
 
 int main(){
     Game newGame; 
-    newGame.gameLoop(5,150); 
+    newGame.gameLoop(100,150); 
     return 0; 
 }
