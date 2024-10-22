@@ -42,7 +42,7 @@ class Game{
             return entities; 
         }
         void gameLoop(int maxIterations, double mineDistanceThreshold){
-            entities = initGame(5,5,20,20);
+            entities = initGame(2,5,20,20);
             int numShip = 0;  
             
             //Count the number of ship: 
@@ -61,12 +61,11 @@ class Game{
                             if(mine->getType() == MineType){
                                 Mine* castedMine = dynamic_cast<Mine*>(mine);
                                 if(Utils::calculateDistance(castedShip->getPos(), castedMine->getPos()) <= mineDistanceThreshold){
-                                    Explosion explosion = castedMine->explode(); 
+                                    Explosion explosion = castedMine->explode();
+                                    explosion.apply(*castedShip); 
                                     numShip--; 
                                     cout << "Ship has exploded" << endl; 
-                                    if(numShip == 0){
-                                        return; 
-                                    }
+                                    break; //Skip this ship
                                 }
                             }
                         }
