@@ -7,9 +7,10 @@
 using namespace std; 
 
 class Utils{
-    static tuple<int, int> generateRandomPos(int gridWidth, int gridHeight); 
+    public: 
+        static tuple<int, int> generateRandomPos(int gridWidth, int gridHeight); 
 
-    static double calculateDistance(std::tuple<int, int> pos1, std::tuple<int, int> pos2); 
+        static double calculateDistance(std::tuple<int, int> pos1, std::tuple<int, int> pos2); 
 };
 
 #endif
