@@ -14,7 +14,11 @@ class GridItem{
             ActiveGridItemCount++; 
 
         }
-        GridItem(): GridItem(0,0,0,0){
+        GridItem(){
+            this->coordinate.first = 0; 
+            this->coordinate.second = 0; 
+            this->gridWidth = 0; 
+            this->gridHeight = 0; 
             ActiveGridItemCount++; 
         }
         void setCoordinates(int x, int y){
