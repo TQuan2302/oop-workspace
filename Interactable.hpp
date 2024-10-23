@@ -32,6 +32,6 @@ class Interactable: public GridItem{
 
 
 };
-int activeInteractableCount = 0; 
+int Interactable:: activeInteractableCount = 0; 
 
 #endif
