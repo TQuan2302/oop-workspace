@@ -30,16 +30,8 @@ class Robot: public GridItem{
         } // decrements the health of the robot. The robot cannot have negative health
 
         bool move(int xOffset, int yOffset){
-        //     if (abs(xOffset) <= 2 && abs(yOffset) <= 2) {
-        //     int newX = getCoordinates().first + xOffset;
-        //     int newY = getCoordinates().second + yOffset;
-        //     if (newX >= 0 && newX < getGridWidth() && newY >= 0 && newY < getGridHeight()) {
-        //         setCoordinates(newX, newY);
-        //         return true;
-        //     }
-        // }
-        // return false;
-            if(xOffset == 0 || yOffset == 0){
+
+            if(abs(xOffset) <= 4 && abs(yOffset) <= 3){
                 int eX = xOffset + this->getCoordinates().first; 
                 int eY = yOffset + this->getCoordinates().second; 
                 if( (eX <= this->getGridWidth() && eX >=0 ) && (eY <= this->getGridHeight() && eY >= 0)  ){
