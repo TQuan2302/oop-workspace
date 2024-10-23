@@ -15,13 +15,18 @@ class Robot: public GridItem{
             return health; 
 
         } // gets the current health of the robot
+
+        void setHealth(){//Decrease by 1 
+            this->health--; 
+        }
         
     
         void takeHit(){
-            if(this->health-- < 0){
+            int extimateHealth = this->getHealth() - 1;
+            if(extimateHealth < 0){
                 return; 
             }
-            health--; 
+            setHealth(); 
         } // decrements the health of the robot. The robot cannot have negative health
 
         bool move(int xOffset, int yOffset){
