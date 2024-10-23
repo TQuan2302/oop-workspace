@@ -7,7 +7,7 @@
 using namespace std; 
 
 class Utils{
-    tuple<int, int> generateRandomPos(int gridWidth, int gridHeight){
+    static tuple<int, int> generateRandomPos(int gridWidth, int gridHeight){
         //Min is 0, max is gridWidth, gridHeight
         int randomWidth = rand() % gridWidth; 
         int randomHeight = rand() % gridHeight; 
@@ -15,7 +15,7 @@ class Utils{
         tuple<int, int> randomPos(randomWidth, randomHeight); 
         return randomPos; 
     }
-    double calculateDistance(std::tuple<int, int> pos1, std::tuple<int, int> pos2){
+    static double calculateDistance(std::tuple<int, int> pos1, std::tuple<int, int> pos2){
         double result = sqrt( pow( get<0>(pos2) - get<0>(pos1) ,2) + pow(get<1>(pos2) - get<1>(pos1), 2)); 
         return result; 
     }
