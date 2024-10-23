@@ -24,6 +24,10 @@ class GridItem{
         std::pair<int,int> getCoordinates(){
             return coordinate;
         }
+        void setCoordinate(int x, int y){
+            this->coordinate.first = x; 
+            this->coordinate.second = y; 
+        }
         int getGridWidth(){
             return gridWidth; 
         }
@@ -43,6 +47,6 @@ class GridItem{
         pair<int, int> coordinate; 
 };
 
-int ActiveGridItemCount = 0;
+int GridItem:: ActiveGridItemCount = 0;
 
 #endif
