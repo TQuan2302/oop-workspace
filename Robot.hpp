@@ -28,8 +28,10 @@ class Robot: public GridItem{
             if(xOffset == 0 || yOffset == 0){
                 if((xOffset + this->getCoordinates().first <= this->getGridWidth()) && (yOffset + this->getCoordinates().second <= this->getGridHeight())  ){
                     this->setCoordinate(this->getCoordinates().first + xOffset, this->getCoordinates().second + yOffset ); 
+                    return true; 
                 }
             }
+            return false; 
         } // moves the robot in the x or y directions by the provided number of steps. 
         //The robot should only be able to move either the x direction or y direction in one call of this function but not both at the same time. 
         //So (0,-1) and (3,0) are legal moves for example but (1,3) is not. 
