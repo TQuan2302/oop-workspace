@@ -34,8 +34,8 @@ class Robot: public GridItem{
             if(abs(xOffset) <= 4 && abs(yOffset) <= 3){
                 int eX = xOffset + this->getCoordinates().first; 
                 int eY = yOffset + this->getCoordinates().second; 
-                if( (eX <= this->getGridWidth() && eX >=0 ) && (eY <= this->getGridHeight() && eY >= 0)  ){
-                    this->setCoordinate(this->getCoordinates().first + xOffset, this->getCoordinates().second + yOffset ); 
+                if( (eX < this->getGridWidth() && eX >=0 ) && (eY < this->getGridHeight() && eY >= 0)  ){
+                    this->setCoordinate(eX, eY ); 
                     return true; 
                 }
             }
