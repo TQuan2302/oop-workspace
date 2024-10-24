@@ -30,11 +30,26 @@ class Robot: public GridItem{
         } // decrements the health of the robot. The robot cannot have negative health
 
         bool move(int xOffset, int yOffset){
-
-            if(abs(xOffset) <= 4 && abs(yOffset) <= 3){
+        //     if (abs(xOffset) <= 2 && abs(yOffset) <= 2) {
+        //     int newX = getCoordinates().first + xOffset;
+        //     int newY = getCoordinates().second + yOffset;
+        //     if (newX >= 0 && newX < getGridWidth() && newY >= 0 && newY < getGridHeight()) {
+        //         setCoordinates(newX, newY);
+        //         return true;
+        //     }
+        // }
+        // return false;
+            if(abs(xOffset) <= 2 && abs(yOffset) <= 2){
                 int eX = xOffset + this->getCoordinates().first; 
                 int eY = yOffset + this->getCoordinates().second; 
-                if( (eX < this->getGridWidth()  ) && (eY < this->getGridHeight() )  ){
+                cout << "x: " << eX << endl; 
+                cout << "y: " << eY << endl; 
+                cout << "w: " << this->getGridWidth() << endl; 
+                cout << "h: " << this->getGridHeight() << endl; 
+                // cout << "Rs1: " << eX << this->getGridWidth() && eX >=0  ;
+                // cout << "Rs2: " << eY << this->getGridHeight() && eY >= 0  ;
+                if( eX < this->getGridWidth() && eX >=0  && eY < this->getGridHeight() && eY >= 0  ){
+                    cout << "Da chay" << endl; 
                     this->setCoordinate(eX, eY ); 
                     return true; 
                 }

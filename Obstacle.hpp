@@ -18,6 +18,9 @@ class Obstacle:public Interactable{
             return false; 
             
         }
+        InteractableType getType(){
+            return OBSTACLE; 
+        }
 };
 
 #endif
