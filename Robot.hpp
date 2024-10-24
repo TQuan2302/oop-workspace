@@ -30,28 +30,20 @@ class Robot: public GridItem{
         } // decrements the health of the robot. The robot cannot have negative health
 
         bool move(int xOffset, int yOffset){
-        //     if (abs(xOffset) <= 2 && abs(yOffset) <= 2) {
-        //     int newX = getCoordinates().first + xOffset;
-        //     int newY = getCoordinates().second + yOffset;
-        //     if (newX >= 0 && newX < getGridWidth() && newY >= 0 && newY < getGridHeight()) {
-        //         setCoordinates(newX, newY);
-        //         return true;
-        //     }
-        // }
-        // return false;
-            if(abs(xOffset) <= 2 && abs(yOffset) <= 2){
+            if(xOffset!=0 && yOffset==0){
                 int eX = xOffset + this->getCoordinates().first; 
+                if( eX >= 0 && eX < getGridWidth()){
+                    this->setCoordinate(eX, getCoordinates().second); 
+                    
+                    return true;
+                }
+            }
+            else if(yOffset!=0 && xOffset==0){
                 int eY = yOffset + this->getCoordinates().second; 
-                cout << "x: " << eX << endl; 
-                cout << "y: " << eY << endl; 
-                cout << "w: " << this->getGridWidth() << endl; 
-                cout << "h: " << this->getGridHeight() << endl; 
-                // cout << "Rs1: " << eX << this->getGridWidth() && eX >=0  ;
-                // cout << "Rs2: " << eY << this->getGridHeight() && eY >= 0  ;
-                if( eX < this->getGridWidth() && eX >=0  && eY < this->getGridHeight() && eY >= 0  ){
-                    cout << "Da chay" << endl; 
-                    this->setCoordinate(eX, eY ); 
-                    return true; 
+                if( eY >= 0 && eY < getGridWidth()){
+                    
+                    this->setCoordinate(getCoordinates().first,eY ); 
+                    return true;
                 }
             }
             return false; 
